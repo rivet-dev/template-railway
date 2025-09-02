@@ -8,6 +8,12 @@ Example project demonstrating basic actor state management and RPC calls with [R
 
 [Discord](https://rivet.gg/discord) — [Documentation](https://rivetkit.org) — [Issues](https://github.com/rivet-gg/rivetkit/issues)
 
+**IMPORTANT**: This template has the Rivet API endpoint exposed publicly. This is not secure and should be changed for production use cases.
+
+## Accessing the Rivet Dashboard
+
+Once deployed to Railway, you can access the Rivet dashboard by visiting the public address that Railway assigns to your Rivet container.
+
 ## Getting Started
 
 ### Prerequisites
