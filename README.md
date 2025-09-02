@@ -1,8 +1,8 @@
 # RivetKit Template for Railway
 
-Example project demonstrating basic actor state management and RPC calls with [RivetKit](https://rivetkit.org).
-
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/rivet?referralCode=RC7bza&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
+Example project demonstrating basic actor state management and RPC calls with [RivetKit](https://rivetkit.org).
 
 [Learn More →](https://github.com/rivet-gg/rivetkit)
 
