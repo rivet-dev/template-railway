@@ -1,6 +1,8 @@
-# Counter for RivetKit
+# RivetKit Template for Railway
 
 Example project demonstrating basic actor state management and RPC calls with [RivetKit](https://rivetkit.org).
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/rivet?referralCode=RC7bza&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 [Learn More →](https://github.com/rivet-gg/rivetkit)
 
@@ -31,6 +33,10 @@ Run the connect script to interact with the counter:
 ```sh
 tsx scripts/connect.ts
 ```
+
+### Deployment
+
+See [Railway deploy documentation](https://docs.railway.com/quick-start#deploying-your-project---from-github).
 
 ## License
 
