@@ -22,12 +22,7 @@
 	"dependencies": {
 		"@hono/node-server": "^1.19.1",
 		"@hono/node-ws": "^1.2.0",
-		"@rivetkit/actor": "^2.0.0"
-	},
-	"pnpm": {
-		"overrides": {
-			"@rivetkit/engine-runner": "https://pkg.pr.new/rivet-gg/rivet/@rivetkit/engine-runner@2848"
-		}
+		"rivetkit": "^2.0.4"
 	},
 	"engines": {
 		"node": ">=22.0.0"

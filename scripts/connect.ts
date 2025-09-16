@@ -1,14 +1,12 @@
-import { createClient } from "@rivetkit/actor/client";
+import { createClient } from "rivetkit/client";
 import type { Registry } from "../src/registry";
 
 async function main() {
 	const client = createClient<Registry>(
-		process.env.ENDPOINT ?? "http://127.0.0.1:8080",
+		process.env.ENDPOINT ?? "http://127.0.0.1:6420",
 	);
 
-	const counter = await client.counter.getOrCreate().connect();
-
-	counter.on("newCount", (count: number) => console.log("Event:", count));
+	const counter = client.counter.getOrCreate();
 
 	for (let i = 0; i < 5; i++) {
 		const out = await counter.increment(5);
@@ -16,9 +14,6 @@ async function main() {
 
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 	}
-
-	await new Promise((resolve) => setTimeout(resolve, 10000));
-	await counter.dispose();
 }
 
 main();
