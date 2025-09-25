@@ -4,11 +4,9 @@
 
 Example project demonstrating basic actor state management and RPC calls with [RivetKit](https://rivetkit.org).
 
-[Learn More →](https://github.com/rivet-gg/rivetkit)
+[Learn More →](https://github.com/rivet-dev/rivetkit)
 
-[Discord](https://rivet.gg/discord) — [Documentation](https://rivetkit.org) — [Issues](https://github.com/rivet-gg/rivetkit/issues)
-
-**IMPORTANT**: This template has the Rivet API endpoint exposed publicly. This is not secure and should be changed for production use cases.
+[Discord](https://rivet.dev/discord) — [Documentation](https://rivetkit.org) — [Issues](https://github.com/rivet-dev/rivetkit/issues)
 
 ## Accessing the Rivet Dashboard
 
@@ -23,8 +21,7 @@ Once deployed to Railway, you can access the Rivet dashboard by visiting the pub
 ### Installation
 
 ```sh
-git clone https://github.com/rivet-gg/rivetkit
-cd rivetkit/examples/counter
+git clone https://github.com/rivet-dev/template-railway
 npm install
 ```
 
@@ -34,11 +31,7 @@ npm install
 npm run dev
 ```
 
-Run the connect script to interact with the counter:
-
-```sh
-tsx scripts/connect.ts
-```
+Visit `http://localhost:5173` to connect to your application.
 
 ### Deployment
 
