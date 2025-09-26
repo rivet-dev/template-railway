@@ -2,7 +2,8 @@ import { createClient, createRivetKit } from "@rivetkit/react";
 import { useEffect, useState, useRef } from "react";
 import type { Message, registry } from "../backend/registry";
 
-const client = createClient<typeof registry>("http://localhost:6420");
+const engineUrl = import.meta.env.VITE_RIVET_ENGINE ?? "http://localhost:6420";
+const client = createClient<typeof registry>(engineUrl);
 const { useActor } = createRivetKit(client);
 
 // Generate avatar color based on username
