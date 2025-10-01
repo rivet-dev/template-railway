@@ -15,8 +15,8 @@ dependencies:
     specifier: ^4.9.8
     version: 4.9.8
   rivetkit:
-    specifier: 2.0.7-rc.1
-    version: 2.0.7-rc.1(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+    specifier: 2.0.7
+    version: 2.0.7(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
 
 devDependencies:
   '@rivetkit/react':
@@ -1069,7 +1069,7 @@ packages:
       '@tanstack/react-store': 0.7.7(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      rivetkit: 2.0.7-rc.1(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+      rivetkit: 2.0.7(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
     transitivePeerDependencies:
       - '@hono/node-server'
       - '@hono/node-ws'
@@ -2211,6 +2211,44 @@ packages:
     resolution: {integrity: sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==}
     engines: {node: '>= 4'}
 
+  /rivetkit@2.0.7(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
+    resolution: {integrity: sha512-XJ5r8jWGnpVryP4/5kpuak0aZJaBiMO3w9TY5KliAus41D1N5ICYW/zuZSe6rpsbzAvsmUnG3k2WDZqPJ13x0A==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      '@hono/node-server': ^1.14.0
+      '@hono/node-ws': ^1.1.1
+      eventsource: ^4.0.0
+      ws: ^8.0.0
+    peerDependenciesMeta:
+      '@hono/node-server':
+        optional: true
+      '@hono/node-ws':
+        optional: true
+      eventsource:
+        optional: true
+      ws:
+        optional: true
+    dependencies:
+      '@bare-ts/lib': 0.3.0
+      '@hono/node-server': 1.19.4(hono@4.9.8)
+      '@hono/node-ws': 1.2.0(@hono/node-server@1.19.4)(hono@4.9.8)
+      '@hono/standard-validator': 0.1.5(@standard-schema/spec@1.0.0)(hono@4.9.8)
+      '@hono/zod-openapi': 0.19.10(hono@4.9.8)(zod@3.25.76)
+      '@rivetkit/engine-runner': '@pkg.pr.new/rivet-dev/engine/@rivetkit/engine-runner@3002'
+      '@rivetkit/fast-json-patch': 3.1.2
+      cbor-x: 1.6.0
+      hono: 4.9.8
+      invariant: 2.2.4
+      nanoevents: 9.1.0
+      on-change: 5.0.1
+      p-retry: 6.2.1
+      pino: 9.9.5
+      zod: 3.25.76
+    transitivePeerDependencies:
+      - '@standard-schema/spec'
+      - bufferutil
+      - utf-8-validate
+
   /rivetkit@2.0.7-rc.1(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
     resolution: {integrity: sha512-C/bDGJLJX0e7w+O6/oeQeKCtBjntobTNqKl18oORsOhYVbXgtpnIepWfm3VoCiQBqRaW89JLP44ivu5ZMsfdqQ==}
     engines: {node: '>=22.0.0'}
@@ -2248,6 +2286,7 @@ packages:
       - '@standard-schema/spec'
       - bufferutil
       - utf-8-validate
+    dev: true
 
   /rollup@4.50.0:
     resolution: {integrity: sha512-/Zl4D8zPifNmyGzJS+3kVoyXeDeT/GrsJM94sACNg9RtUE0hrHa1bNPtRSrfHTMH5HjRzce6K7rlTh3Khiw+pw==}
