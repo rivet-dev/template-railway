@@ -7,11 +7,14 @@ import { dirname, join } from "path";
 
 const isProd = process.env.NODE_ENV === "production";
 
+// Serve frontend
 if (isProd) {
 	const __filename = fileURLToPath(import.meta.url);
 	const __dirname = dirname(__filename);
 
 	const app = new Hono();
+
+	app.get("/health", (c) => c.json({ status: "ok" }));
 
 	if (process.env.NODE_ENV === "production") {
 		app.use("/*", serveStatic({ root: join(__dirname, "../dist/frontend") }));
