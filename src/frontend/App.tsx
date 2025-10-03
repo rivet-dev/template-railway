@@ -2,8 +2,11 @@ import { createClient, createRivetKit } from "@rivetkit/react";
 import { useEffect, useState, useRef } from "react";
 import type { Message, registry } from "../backend/registry";
 
-const engineUrl = import.meta.env.VITE_RIVET_ENGINE ?? "http://localhost:6420";
-const client = createClient<typeof registry>(engineUrl);
+const client = createClient<typeof registry>({
+	endpoint: import.meta.env.VITE_RIVET_ENGINE ?? "http://localhost:6420",
+	token: import.meta.env.VITE_RIVET_TOKEN,
+	namespace: import.meta.env.VITE_RIVET_NAMESPACE
+});
 const { useActor } = createRivetKit(client);
 
 // Generate avatar color based on username
@@ -71,7 +74,7 @@ export function App() {
 		const date = new Date(timestamp);
 		const now = new Date();
 		const isToday = date.toDateString() === now.toDateString();
-		
+
 		if (isToday) {
 			return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 		} else {
@@ -86,7 +89,7 @@ export function App() {
 					<div className="logo">
 						<h1>Rivet Chat</h1>
 					</div>
-					<button 
+					<button
 						className="close-sidebar"
 						onClick={() => setSidebarOpen(false)}
 					>
@@ -96,7 +99,7 @@ export function App() {
 						</svg>
 					</button>
 				</div>
-				
+
 				<div className="user-settings">
 					<div className="setting-group">
 						<label htmlFor="username">Username</label>
@@ -132,7 +135,7 @@ export function App() {
 
 			<div className="chat-container">
 				<div className="chat-header">
-					<button 
+					<button
 						className="menu-button"
 						onClick={() => setSidebarOpen(true)}
 					>
@@ -161,12 +164,12 @@ export function App() {
 								const isCurrentUser = msg.sender === username;
 								const prevMessage = i > 0 ? messages[i - 1] : null;
 								const showAvatar = !prevMessage || prevMessage.sender !== msg.sender;
-								
+
 								return (
 									<div key={i} className={`message-wrapper ${isCurrentUser ? 'own' : 'other'}`}>
 										{!isCurrentUser && showAvatar && (
 											<div className="message-avatar">
-												<div 
+												<div
 													className="avatar"
 													style={{ backgroundColor: getAvatarColor(msg.sender) }}
 												>
@@ -175,7 +178,7 @@ export function App() {
 											</div>
 										)}
 										{!isCurrentUser && !showAvatar && <div className="avatar-spacer"></div>}
-										
+
 										<div className="message-content">
 											{!isCurrentUser && showAvatar && (
 												<div className="message-sender">{msg.sender}</div>
