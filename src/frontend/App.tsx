@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import type { Message, registry } from "../backend/registry";
 
 const client = createClient<typeof registry>({
-	endpoint: import.meta.env.VITE_RIVET_ENGINE ?? "http://localhost:6420",
+	endpoint: import.meta.env.VITE_RIVET_ENDPOINT ?? "http://localhost:6420",
 	token: import.meta.env.VITE_RIVET_TOKEN,
 	namespace: import.meta.env.VITE_RIVET_NAMESPACE
 });
