@@ -15,13 +15,13 @@ dependencies:
     specifier: ^4.9.8
     version: 4.9.8
   rivetkit:
-    specifier: 2.0.10
-    version: 2.0.10(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+    specifier: 2.0.11
+    version: 2.0.11(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
 
 devDependencies:
   '@rivetkit/react':
-    specifier: 2.0.10
-    version: 2.0.10(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)(react-dom@18.3.1)(react@18.3.1)
+    specifier: 2.0.11
+    version: 2.0.11(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)(react-dom@18.3.1)(react@18.3.1)
   '@types/node':
     specifier: ^22.13.9
     version: 22.18.0
@@ -1044,11 +1044,11 @@ packages:
   /@rivetkit/fast-json-patch@3.1.2:
     resolution: {integrity: sha512-CtA50xgsSSzICQduF/NDShPRzvucnNvsW/lQO0WgMTT1XAj9Lfae4pm7r3llFwilgG+9iq76Hv1LUqNy72v6yw==}
 
-  /@rivetkit/framework-base@2.0.10(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
-    resolution: {integrity: sha512-RRuyX5mPrbCE7UY8ZHXaW2XCk4tfck3zM3/OcYWCrJECGmXf+QrIW2AAWEcxM13wWsWaZo4Fec00ozSrvV0iTQ==}
+  /@rivetkit/framework-base@2.0.11(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
+    resolution: {integrity: sha512-E9TrgbY88DF9UKzPchRWm8P67AAEsXasjpYkRL0lpdJhgDJn4VcHrejY/f7LsINCzcOS3LFf57IJNeZkEAd3sw==}
     dependencies:
       '@tanstack/store': 0.7.7
-      rivetkit: 2.0.10(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+      rivetkit: 2.0.11(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
     transitivePeerDependencies:
       - '@hono/node-server'
       - '@hono/node-ws'
@@ -1059,17 +1059,17 @@ packages:
       - ws
     dev: true
 
-  /@rivetkit/react@2.0.10(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-my0og+yLrQyDnqdfafspYwhCf/dMK3AuZEUeZuFSaEJE+vzR3wHmaa6WEBDB0lvNuHPf1M9sT3wxhvwY3FnFNA==}
+  /@rivetkit/react@2.0.11(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-Nouv/oexnLp/DpkCgs6EtCY7b+hKUy2UPbAvzzgFXPfWlvyd3V4o8i4z1CoHxsjOyXD8WRaD2xohCdv6GzkUvw==}
     peerDependencies:
       react: ^18 || ^19
       react-dom: ^18 || ^19
     dependencies:
-      '@rivetkit/framework-base': 2.0.10(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+      '@rivetkit/framework-base': 2.0.11(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
       '@tanstack/react-store': 0.7.7(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      rivetkit: 2.0.10(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+      rivetkit: 2.0.11(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
     transitivePeerDependencies:
       - '@hono/node-server'
       - '@hono/node-ws'
@@ -2211,8 +2211,8 @@ packages:
     resolution: {integrity: sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==}
     engines: {node: '>= 4'}
 
-  /rivetkit@2.0.10(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
-    resolution: {integrity: sha512-8tGX//z9zsdNVs9+DL2HsDDCidlaFfX13Fie85pefcMZa341xjNlNMoGGKBlgeYmWpBtnhJ0lDPZhHUj9EPm3Q==}
+  /rivetkit@2.0.11(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
+    resolution: {integrity: sha512-NwKVrT/7xattiYNlu1yEPkBX6XaRLF9elJFd6dUdpjICOzrM6RvTajLx64UUelTDYSadUu8jAmUWNwZsW5Yn8g==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@hono/node-server': ^1.14.0
