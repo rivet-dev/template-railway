@@ -28,8 +28,4 @@ if (isProd) {
 }
 
 // Start RivetKit
-registry.start({
-	cors: isProd
-		? undefined
-		: { origin: "http://localhost:5173", credentials: true },
-});
+registry.start();
