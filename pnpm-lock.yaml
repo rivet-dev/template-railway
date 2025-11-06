@@ -15,13 +15,13 @@ dependencies:
     specifier: ^4.9.8
     version: 4.9.8
   rivetkit:
-    specifier: 2.0.13
-    version: 2.0.13(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+    specifier: 2.0.23
+    version: 2.0.23(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
 
 devDependencies:
   '@rivetkit/react':
-    specifier: 2.0.13
-    version: 2.0.13(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)(react-dom@18.3.1)(react@18.3.1)
+    specifier: 2.0.23
+    version: 2.0.23(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)(react-dom@18.3.1)(react@18.3.1)
   '@types/node':
     specifier: ^22.13.9
     version: 22.18.0
@@ -1041,14 +1041,30 @@ packages:
     dev: true
     optional: true
 
+  /@rivetkit/engine-runner-protocol@2.0.23:
+    resolution: {integrity: sha512-V9NFDp89Q9ByVA/u6u2DAvplgonE+wX2LTXdJIf+tPDJQjDi2c/g58p/jbDVE3pYIGmc9IO3EE+adzUOZqJhhA==}
+    dependencies:
+      '@bare-ts/lib': 0.4.0
+
+  /@rivetkit/engine-runner@2.0.23:
+    resolution: {integrity: sha512-OhRzGyEFZjMq027/EPLWRJzx3vJSMtfVp32dUqy7/AI3zyH5v2fm74r4njf2cmMX1GbT5u8h7ypzuN8wWlpuOg==}
+    dependencies:
+      '@rivetkit/engine-runner-protocol': 2.0.23
+      pino: 9.9.5
+      uuid: 12.0.0
+      ws: 8.18.3
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
   /@rivetkit/fast-json-patch@3.1.2:
     resolution: {integrity: sha512-CtA50xgsSSzICQduF/NDShPRzvucnNvsW/lQO0WgMTT1XAj9Lfae4pm7r3llFwilgG+9iq76Hv1LUqNy72v6yw==}
 
-  /@rivetkit/framework-base@2.0.13(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
-    resolution: {integrity: sha512-8R1pvgMeDtxFZfvxjf3NHCngJSq68Q9NJTG3z5p1k8dYaz7PlcOvOnIRNYKnTZRmv8nVOnkWUSlqjvZWiCk3UA==}
+  /@rivetkit/framework-base@2.0.23(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
+    resolution: {integrity: sha512-2beXLuhjg5tX+kqoRy/WC5qX37lsIkFhjvsl/GTJ9FFk/2oCI+m+zRy7vthMssZ8yYwddyZP8AHpW8sNBNHXhA==}
     dependencies:
       '@tanstack/store': 0.7.7
-      rivetkit: 2.0.13(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+      rivetkit: 2.0.23(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
     transitivePeerDependencies:
       - '@hono/node-server'
       - '@hono/node-ws'
@@ -1059,17 +1075,21 @@ packages:
       - ws
     dev: true
 
-  /@rivetkit/react@2.0.13(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-gTstirTuA128T6WyLFmmQpiZi6odVLcZoUDiEqHoNHrq07XII70NNTrDx3/8e+XXlrdKiVqCh4hDvtfC41VmNA==}
+  /@rivetkit/on-change@6.0.2-rc.1:
+    resolution: {integrity: sha512-5RC9Ze/wTKqSlJvopdCgr+EfyV93+iiH8Thog0QXrl8PT1unuBNw/jadXNMtwgAxrIaCJL+JLaHQH9w7rqpMDw==}
+    engines: {node: '>=20'}
+
+  /@rivetkit/react@2.0.23(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-6LOEtgOsz34sS7k5EmmvekuqsuSBCa4asUg6VIJ5hEjFkwwzhPKoi4qmq23ttKbMDYhkczBTIsCLNkjwWofz8A==}
     peerDependencies:
       react: ^18 || ^19
       react-dom: ^18 || ^19
     dependencies:
-      '@rivetkit/framework-base': 2.0.13(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+      '@rivetkit/framework-base': 2.0.23(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
       '@tanstack/react-store': 0.7.7(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      rivetkit: 2.0.13(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
+      rivetkit: 2.0.23(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0)
     transitivePeerDependencies:
       - '@hono/node-server'
       - '@hono/node-ws'
@@ -2027,10 +2047,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /on-change@5.0.1:
-    resolution: {integrity: sha512-n7THCP7RkyReRSLkJb8kUWoNsxUIBxTkIp3JKno+sEz6o/9AJ3w3P9fzQkITEkMwyTKJjZciF3v/pVoouxZZMg==}
-    engines: {node: '>=18'}
-
   /on-exit-leak-free@2.1.2:
     resolution: {integrity: sha512-0eJJY6hXLGf1udHwfNftBqH+g73EU4B504nZeKpz1sYRKafAghwxEJunB2O7rDZkL4PGfsMVnTXZ2EjibbqcsA==}
     engines: {node: '>=14.0.0'}
@@ -2211,8 +2227,8 @@ packages:
     resolution: {integrity: sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==}
     engines: {node: '>= 4'}
 
-  /rivetkit@2.0.13(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
-    resolution: {integrity: sha512-c0vaCYZuihNulNleDSu9t9Prk8ctSEgKMyrWxUDuPNK5XgpdJ4LH25YS0lBdoS/tBOchAJVf9+3D8DuPFmij+A==}
+  /rivetkit@2.0.23(@hono/node-server@1.19.4)(@hono/node-ws@1.2.0)(@standard-schema/spec@1.0.0):
+    resolution: {integrity: sha512-khDrM4azSQ8//cy4ZOkV5jkRQQxAkOoBUFo5U29nMGAdOy0FuE29u8PLsIwsTweWoQKyTnNNK7x5sTLyA4Oj6w==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@hono/node-server': ^1.14.0
@@ -2234,15 +2250,16 @@ packages:
       '@hono/node-ws': 1.2.0(@hono/node-server@1.19.4)(hono@4.9.8)
       '@hono/standard-validator': 0.1.5(@standard-schema/spec@1.0.0)(hono@4.9.8)
       '@hono/zod-openapi': 0.19.10(hono@4.9.8)(zod@3.25.76)
-      '@rivetkit/engine-runner': '@pkg.pr.new/rivet-dev/engine/@rivetkit/engine-runner@bdfca35'
+      '@rivetkit/engine-runner': 2.0.23
       '@rivetkit/fast-json-patch': 3.1.2
       cbor-x: 1.6.0
       hono: 4.9.8
       invariant: 2.2.4
       nanoevents: 9.1.0
-      on-change: 5.0.1
+      on-change: /@rivetkit/on-change@6.0.2-rc.1
       p-retry: 6.2.1
       pino: 9.9.5
+      uuid: 12.0.0
       zod: 3.25.76
     transitivePeerDependencies:
       - '@standard-schema/spec'
@@ -2817,23 +2834,3 @@ packages:
 
   /zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
-
-  '@pkg.pr.new/rivet-dev/engine/@rivetkit/engine-runner-protocol@bdfca352cca0c3733377f09a570016df38c2f20f':
-    resolution: {tarball: https://pkg.pr.new/rivet-dev/engine/@rivetkit/engine-runner-protocol@bdfca352cca0c3733377f09a570016df38c2f20f}
-    name: '@rivetkit/engine-runner-protocol'
-    version: 25.7.3
-    dependencies:
-      '@bare-ts/lib': 0.4.0
-
-  '@pkg.pr.new/rivet-dev/engine/@rivetkit/engine-runner@bdfca35':
-    resolution: {tarball: https://pkg.pr.new/rivet-dev/engine/@rivetkit/engine-runner@bdfca35}
-    name: '@rivetkit/engine-runner'
-    version: 25.7.3
-    dependencies:
-      '@rivetkit/engine-runner-protocol': '@pkg.pr.new/rivet-dev/engine/@rivetkit/engine-runner-protocol@bdfca352cca0c3733377f09a570016df38c2f20f'
-      pino: 9.9.5
-      uuid: 12.0.0
-      ws: 8.18.3
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
