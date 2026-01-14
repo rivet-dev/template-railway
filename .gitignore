@@ -1,5 +1,2 @@
 .actorcore
-.turbo
-dist
-frontend/dist
 node_modules
