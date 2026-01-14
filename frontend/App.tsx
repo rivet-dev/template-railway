@@ -1,12 +1,8 @@
 import { createRivetKit } from "@rivetkit/react";
 import { useEffect, useState, useRef } from "react";
-import type { Message, registry } from "../backend/registry";
+import type { Message, registry } from "../src/actors.ts";
 
-const { useActor } = createRivetKit({
-	endpoint: import.meta.env.VITE_RIVET_ENDPOINT ?? "http://localhost:6420",
-	token: import.meta.env.VITE_RIVET_TOKEN,
-	namespace: import.meta.env.VITE_RIVET_NAMESPACE
-});
+const { useActor } = createRivetKit<typeof registry>(`${location.origin}/api/rivet`);
 
 // Generate avatar color based on username
 const getAvatarColor = (username: string) => {
