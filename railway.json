@@ -1,12 +1,6 @@
 {
   "$schema": "https://backboard.railway.app/railway.schema.json",
   "deploy": {
-    "sleepApplication": true,
-    "multiRegionConfig": {
-      "us-west2": {},
-      "us-east4-eqdc4a": {},
-      "europe-west4-drams3a": {},
-      "asia-southeast1-eqsg3a": {}
-    }
+    "sleepApplication": true
   }
 }
